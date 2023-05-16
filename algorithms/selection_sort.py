@@ -4,6 +4,8 @@ from support.decorators import timer
 
 @timer
 def selection_sort(array):
+    if len(array) < 2:
+        return array
     for i in range(len(array)):
         min_index = i
         for j in range(i + 1, len(array)):
@@ -24,6 +26,8 @@ def find_min(array, i, min_index):
 
 @timer
 def selection_sort_recursive(array, i=0):
+    if len(array) < 2:
+        return array
     if i == len(array) - 1:
         return array
 
