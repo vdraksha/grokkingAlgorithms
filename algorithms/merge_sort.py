@@ -20,12 +20,11 @@ def merge(left, right):
 def merge_sort(array):
     if len(array) == 1:
         return array
-    left = merge_sort(array[:len(array)//2])
-    right = merge_sort(array[len(array)//2:])
+    left = array[:len(array)//2]
+    right = array[len(array)//2:]
     return merge(merge_sort(left), merge_sort(right))
 
 
 if __name__ == '__main__':
-    a = [3, 5, 1, 6, 9, 8, 2]
-    print(merge_sort(a))
+    pass
 
